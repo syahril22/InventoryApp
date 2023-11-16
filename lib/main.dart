@@ -9,14 +9,14 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SharedPref sharedPref = SharedPref();
   bool isLoggedIn = await sharedPref.read("login");
-  runApp(MainApp(
+  runApp(MyApp(
     isLoggedIn: isLoggedIn,
   ));
 }
 
-class MainApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
   final bool isLoggedIn;
-  const MainApp({super.key, required this.isLoggedIn});
+  const MyApp({super.key, required this.isLoggedIn});
 
   @override
   Widget build(BuildContext context) {

@@ -17,13 +17,13 @@ class HomePage extends StatelessWidget {
     final itemProvider = Provider.of<ItemProvider>(context);
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.red,
         title: const Text("Inventory App"),
         actions: [
           IconButton(
               onPressed: () {
-                final route =
-                    MaterialPageRoute(builder: (context) => SearchPage());
-                Navigator.push(context, route);
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SearchPage()));
               },
               icon: Icon(Icons.search)),
           IconButton(
@@ -46,17 +46,25 @@ class HomePage extends StatelessWidget {
                   final barang = itemProvider.listBarang[index];
                   return GestureDetector(
                       onTap: () {
-                        final route = MaterialPageRoute(
-                            builder: (context) => FormPage(
-                                  itemBarang: barang,
-                                ));
-                        Navigator.push(context, route);
+                        // final route = MaterialPageRoute(
+                        //     builder: (context) => FormPage(
+                        //           itemBarang: barang,
+                        //         ));
+                        // Navigator.push(context, route);
+
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => FormPage(
+                                      itemBarang: barang,
+                                    )));
                       },
                       child: GridItemWidgets(barang: barang));
                 },
               ),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.red,
         onPressed: () {
           final route = MaterialPageRoute(builder: (context) => FormPage());
           Navigator.push(context, route);

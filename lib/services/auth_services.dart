@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:inventory_app/models/response_login.dart';
 
-const host = "192.168.70.229";
+const host = "172.16.10.229";
 
 class AuthServices {
   Future<ResponseLogin> login(String email, String password) async {

@@ -12,6 +12,7 @@ class SearchPage extends StatelessWidget {
     final itemProvider = Provider.of<ItemProvider>(context);
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.red,
         title: TextFormField(
           decoration: const InputDecoration(
               hintText: "Enter keywords...",

@@ -40,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: SizedBox(
                     height: 200.0,
                     child: Image.network(
-                      'https://github.com/tbadhit/MovieCatalogue-iOS/assets/75456232/01a33156-ef88-49be-9afb-d93e8a8e136b',
+                      'https://github-production-user-asset-6210df.s3.amazonaws.com/75456232/242476408-01a33156-ef88-49be-9afb-d93e8a8e136b.png',
                       color: Colors.red,
                     ),
                   ),

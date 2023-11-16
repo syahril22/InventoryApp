@@ -50,7 +50,7 @@ class _FormPageState extends State<FormPage> {
       child: ElevatedButton(
         onPressed: handleActionButton,
         style: ElevatedButton.styleFrom(
-            backgroundColor: Theme.of(context).primaryColor,
+            backgroundColor: Colors.red,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10))),
         child: Text(
@@ -65,7 +65,8 @@ class _FormPageState extends State<FormPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Add Item"),
+        backgroundColor: Colors.red,
+        title: Text(isUpdateForm ? 'Update Item' : 'Add Item'),
         actions: widget.itemBarang != null
             ? [
                 IconButton(
